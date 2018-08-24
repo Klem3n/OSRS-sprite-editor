@@ -6,3 +6,6 @@ This tool allows you to edit the sprites inside the OSRS cache
 * Add new sprites
 * Replace sprites
 * Export sprites
+
+Credits:
+* [Nshusa](https://github.com/nshusa)
