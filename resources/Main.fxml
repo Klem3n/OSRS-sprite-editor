@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" prefHeight="503.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.nshusa.controller.Controller">
+   <left>
+      <VBox alignment="CENTER" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <ListView fx:id="listView" minWidth="120.0" onMouseClicked="#showFrames">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#importFrames" text="Add Frames" />
+                        <MenuItem mnemonicParsing="false" onAction="#exportFrames" text="Export Frames" />
+                        <MenuItem mnemonicParsing="false" onAction="#removeFrames" text="Remove frames" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </ListView>
+            <TextField fx:id="searchTf" alignment="CENTER" promptText="Search..." style="-fx-background-repeat: no-repeat; -fx-background-image: url('icons/search_icon.png'); -fx-background-position: left center;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <tooltip>
+                  <Tooltip text="Use this to search for a sprite by its name or id" />
+               </tooltip>
+            </TextField>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <VBox>
+         <children>
+            <StackPane>
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="titleLbl" text="OSRS sprite editor" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <Button fx:id="minBtn" mnemonicParsing="false" onAction="#minimizeProgram" prefHeight="20.0" prefWidth="45.0">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="maxBtn" mnemonicParsing="false" prefHeight="20.0" prefWidth="45.0">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="closeBtn" mnemonicParsing="false" onAction="#closeProgram" prefHeight="20.0" prefWidth="45.0">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </StackPane>
+            <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+               <children>
+                  <Button fx:id="importBinaryBtn" mnemonicParsing="false" onAction="#importBinary" text="Import">
+                     <tooltip>
+                        <Tooltip text="Use this button to import main_file_sprites.dat" />
+                     </tooltip>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="importImageBtn" mnemonicParsing="false" onAction="#importFrames" text="Import">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Use this button to import raw sprites" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="exportImageBtn" mnemonicParsing="false" onAction="#exportImages" text="Export">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Use this button to export sprites into their raw format" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox alignment="CENTER" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <ListView fx:id="frameView" minWidth="120.0">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+               <contextMenu>
+                  <ContextMenu>
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#importImages" text="Add image" />
+                         <MenuItem mnemonicParsing="false" onAction="#replaceImage" text="Replace image" />
+                         <MenuItem mnemonicParsing="false" onAction="#exportImage" text="Export image" />
+                        <MenuItem mnemonicParsing="false" onAction="#removeImage" text="Remove image" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </ListView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

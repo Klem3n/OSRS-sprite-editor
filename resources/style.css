@@ -1,0 +1,299 @@
+* {
+	-fx-font-size: 11pt;
+	-fx-font-family: "Segoe UI Semibold";
+}
+
+.root {
+	-fx-background-color : #121212;	
+}
+
+.list-view, .list-cell {
+	-fx-background-color: #1F1F1F;
+}
+
+.tool-bar {
+	-fx-background-color: #121212;
+}
+
+.button {
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
+}
+
+#importBinaryBtn {
+	-fx-graphic: url('/icons/import_binary_32.png');
+}
+
+#importBinaryBtn:hover {
+	-fx-background-color: #292929;
+}
+
+#importBinaryBtn:pressed {
+	-fx-background-color: #1F1F1F;
+}
+
+#scanBtn {
+	-fx-graphic: url('/icons/scan_32.png');
+}
+
+#scanBtn:hover {
+	-fx-background-color: #292929;
+}
+
+#scanBtn:pressed {
+	-fx-background-color: #1F1F1F;
+}
+
+#importImageBtn {
+	-fx-graphic: url('/icons/import_image_32.png');
+}
+
+#importImageBtn:hover {
+    -fx-background-color: #292929;
+}
+
+#importImageBtn:pressed {
+    -fx-background-color: #1F1F1F;
+}
+
+#exportImageBtn {
+	-fx-graphic: url('/icons/export_image_32.png');
+}
+
+#exportImageBtn:hover {
+    -fx-background-color: #292929;
+}
+
+#exportImageBtn:pressed {
+    -fx-background-color: #1F1F1F;
+}
+
+#minBtn {
+	-fx-graphic: url('/icons/minimize_icon_light.png');
+}
+
+#minBtn:hover {
+	-fx-background-color: #292929;
+}
+
+#minBtn:pressed {
+    -fx-background-color: #1F1F1F;
+}
+
+#maxBtn {
+	-fx-graphic: url('/icons/maximize_icon_light.png');
+}
+
+#maxBtn:pressed {
+    -fx-background-color: #1F1F1F;
+}
+
+#closeBtn {
+	-fx-graphic: url('/icons/close_icon_light.png');
+}
+
+#closeBtn:hover {
+	-fx-background-color: #E81123;
+}
+
+#closeBtn:pressed {
+	-fx-background-color: #F1707A;
+}
+
+.titled-pane * {
+	-fx-background-color: transparent;
+}
+
+.titled-pane {
+	-fx-text-fill: white;
+}
+
+.titled-pane > .title 
+{
+	-fx-background-color: #181818;
+	-fx-text-fill: white;
+}
+
+.titled-pane > .title > .arrow-button .arrow 
+{
+	-fx-background-color: none;
+}
+
+.titled-pane > *.content 
+{
+	-fx-background-color: #181818;
+	-fx-box-border: transparent;
+}
+
+*.scroll-bar:horizontal {
+    -fx-opacity: 0;
+}
+
+*.scroll-bar:vertical *.thumb {
+    -fx-background-color: #333333;
+    -fx-padding: 10px;
+}
+
+*.scroll-bar:vertical *.thumb:hover {
+	-fx-background-color: #404040;
+}
+
+*.scroll-bar:vertical *.increment-button,
+*.scroll-bar:vertical *.decrement-button {
+    -fx-background-color: #121212;
+    -fx-padding: 5px;
+    -fx-border-color: #121212;
+    -fx-background-insets: 0, 0, 0;
+}
+
+*.scroll-bar:vertical *.increment-arrow, 
+*.scroll-bar:vertical *.decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding:5px;     
+}
+
+*.scroll-bar:vertical *.track {
+	-fx-background-color: #181818;
+	-fx-padding: 10px;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(
+        from 0px .75em to .75em 0px,
+        repeat,
+        -fx-accent 0%,
+        -fx-accent 49%,
+        derive(-fx-accent, 30%) 50%,
+        derive(-fx-accent, 30%) 99%
+    );
+    -fx-background-insets: 0;
+}
+
+.progress-bar > .track {
+	-fx-background-color: #34495e;
+	-fx-text-box-border: #34495e;
+	-fx-control-inner-background: #34495e;
+}
+
+.context-menu {
+	-fx-background-color: #333333;
+}
+
+.menu-item {
+	-fx-background-color: #333333;
+}
+
+.menu-item:hover {
+	-fx-background-color: #292929;
+}
+
+.menu-item .label {
+    -fx-text-fill: white;
+}
+
+.tooltip {
+	-fx-background-color: #292929;
+}
+
+.list-cell:filled:hover {
+	-fx-text-fill: white;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-text-fill: white;
+}
+
+.list-cell:even {
+    -fx-text-fill: gray;
+    -fx-background-color: #1F1F1F;
+}
+
+.list-cell:odd {
+    -fx-text-fill: gray;
+	-fx-background-color: #1F1F1F;
+}
+
+#spriteRefIdT, #spriteRefId, #spriteFrameIdT, #spriteFrameId, #spriteWidthT, #spriteWidth, #spriteHeightT, #spriteHeight, #spritePixelsT, #spritePixels {
+	-fx-fill: white;
+}
+
+.sprite-item:hover {
+	opacity: 0.8;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+	-fx-prompt-text-fill: black;
+}
+
+.text-field .search {
+	-fx-background-image:url('icons/search_icon.png');
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: left center;
+}
+
+#titleLbl {
+	-fx-text-fill: white;
+}
+
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+.scroll-pane {
+	-fx-base :  #121212;
+	-fx-background-color:  #121212;
+	-fx-control-inner-background:  #121212;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+.tab-pane .tab
+{
+    -fx-background-color: white;
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #1F1F1F;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: black;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: gray;
+}
+
+.tab:focused {
+    -fx-text-fill: white;
+}
+
+// removes blue border
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: transparent;
+}
+
+#infoGridPane .label {
+    -fx-text-fill: white;
+}
+
+.text-white {
+    -fx-text-fill: white;
+}
