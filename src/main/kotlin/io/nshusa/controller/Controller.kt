@@ -30,7 +30,6 @@ import javafx.stage.Stage
 import javafx.stage.StageStyle
 import net.openrs.cache.sprite.Sprite
 import org.CacheManager
-import org.apache.commons.imaging.Imaging
 import org.displee.SpritePacker
 import java.awt.image.BufferedImage
 import java.io.*
@@ -337,6 +336,15 @@ class Controller : Initializable {
         var selectedIndex = frameView.selectionModel.selectedIndex ?: return
 
         selectedSprite.frames[selectedIndex] = ImageIO.read(selectedFile)
+
+        selectedSprite.subWidths[selectedIndex] = selectedSprite.frames[selectedIndex].width
+        selectedSprite.subHeights[selectedIndex] = selectedSprite.frames[selectedIndex].height
+
+        println(selectedSprite.offsetsX[selectedIndex])
+        println(selectedSprite.offsetsY[selectedIndex])
+
+        selectedSprite.offsetsX[selectedIndex] = 0;
+        selectedSprite.offsetsY[selectedIndex] = 0;
 
         SpritePacker.packSprite(selectedSprite.index,  selectedSprite)
 

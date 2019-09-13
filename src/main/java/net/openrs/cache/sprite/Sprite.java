@@ -263,6 +263,8 @@ public final class Sprite {
 				int width = getSubWidths().get(i);
 				int height = getSubHeights().get(i);
 
+				System.out.println(width + " " + height);
+
 				/* loop through all the pixels constructing a palette */
 				int flags = FLAG_VERTICAL; // TODO: do we need to support
 											// horizontal encoding?
@@ -336,16 +338,16 @@ public final class Sprite {
 
 			/* write the individual offsets and dimensions */
 			for (int i = 0; i < frames.length; i++) {
-					os.writeShort(getOffsetsX().get(i));
+				os.writeShort(getOffsetsX().get(i));
 			}
 			for (int i = 0; i < frames.length; i++) {
-					os.writeShort(getOffsetsY().get(i));
+				os.writeShort(getOffsetsY().get(i));
 			}
 			for (int i = 0; i < frames.length; i++) {
-					os.writeShort(getSubWidths().get(i));
+				os.writeShort(getSubWidths().get(i));
 			}
 			for (int i = 0; i < frames.length; i++) {
-					os.writeShort(getSubHeights().get(i));
+				os.writeShort(getSubHeights().get(i));
 			}
 
 			/* write the number of frames */

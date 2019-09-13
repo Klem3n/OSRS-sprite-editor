@@ -14,7 +14,6 @@ import org.displee.cache.index.archive.Archive;
 import net.openrs.cache.Cache;
 import net.openrs.cache.FileStore;
 import net.openrs.cache.sprite.Sprite;
-import org.jetbrains.annotations.NotNull;
 
 public class SpritePacker {
 
@@ -47,7 +46,7 @@ public class SpritePacker {
 		}
 	}
 
-	public static void addSprite(@NotNull Sprite selectedSprite) throws IOException {
+	public static void addSprite(Sprite selectedSprite) throws IOException {
 		CacheLibrary library = CacheManager.cacheLibrary;
 
 		Archive a = library.getIndex(8).addArchive();

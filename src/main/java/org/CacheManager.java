@@ -11,7 +11,6 @@ import org.displee.CacheLibrary;
 import org.displee.CacheLibraryMode;
 import org.displee.cache.index.Index;
 import org.displee.cache.index.archive.file.File;
-import org.jetbrains.annotations.NotNull;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

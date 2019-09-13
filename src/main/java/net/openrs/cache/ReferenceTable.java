@@ -468,10 +468,22 @@ public class ReferenceTable {
 
 		/* read the child identifiers if present */
 		if ((table.flags & FLAG_IDENTIFIERS) != 0) {
-			for (int id : ids) {
-				identifiersArray = new int[members[id].length];
-				for (int child : members[id]) {
-					int identifier = buffer.getInt();
+			for (final int id : ids) {
+
+				/* added block of code */
+				int length = members[id][0];
+				{
+					for (final int child : members[id]) {
+						if (child > length) {
+							length = child;
+						}
+					}
+					length++;
+				}
+
+				identifiersArray = new int[/*members[id].length*/length];
+				for (final int child : members[id]) {
+					final int identifier = buffer.getInt();
 					identifiersArray[child] = identifier;
 					table.entries.get(id).entries.get(child).identifier = identifier;
 				}
